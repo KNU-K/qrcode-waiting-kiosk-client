@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
-import api from "../../api/api";
 
-function App() {
+function QRGenerator() {
   const [qrCode, setQrCode] = useState("");
 
   useEffect(() => {
-    // ì„œë²„ì—ì„œ QR ì½”ë“œë¥¼ ê°€ì ¸ì˜¤ëŠ” ë¡œì§
-    fetch("http://localhost:8000/api/qr") // ì‹¤ì œ ì„œë²„ ì—”ë“œí¬ì¸íŠ¸ë¡œ ë³€ê²½í•˜ì„¸ìš”.
+    // ¼­¹ö¿¡¼­ QR ÄÚµå¸¦ °¡Á®¿À´Â ·ÎÁ÷
+    fetch("http://localhost:8000/api/auth/register", {
+      method: "POST",
+      body: {
+        productName: "asd",
+        productPrice: 3000,
+      },
+    }) // ½ÇÁ¦ ¼­¹ö ¿£µåÆ÷ÀÎÆ®·Î º¯°æÇÏ¼¼¿ä.
       .then((response) => response.blob())
       .then((blob) => {
         const qrCodeURL = URL.createObjectURL(blob);
@@ -22,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default QRGenerator;
