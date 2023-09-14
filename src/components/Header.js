@@ -5,7 +5,7 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <h1>헤더 컴포넌트</h1>
+      <h1>Kiosk Service</h1>
     </header>
   );
 }
