@@ -5,7 +5,7 @@ function QRGenerator() {
 
   useEffect(() => {
     // 서버에서 QR 코드를 가져오는 로직
-    fetch("http://localhost:8000/api/auth/register", {
+    fetch("https://192.168.45.61:8002/api/auth/register", {
       method: "POST",
       body: {
         productName: "asd",
