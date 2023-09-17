@@ -2,7 +2,7 @@ class Speak {
   static speakWelcome() {
     if ("speechSynthesis" in window) {
       const synth = window.speechSynthesis;
-      const utterance = new SpeechSynthesisUtterance("Åë°ú");
+      const utterance = new SpeechSynthesisUtterance("í†µê³¼");
       synth.speak(utterance);
     } else {
       alert("err");
@@ -12,7 +12,7 @@ class Speak {
   static speakFail() {
     if ("speechSynthesis" in window) {
       const synth = window.speechSynthesis;
-      const utterance = new SpeechSynthesisUtterance("ºÒÀÏÄ¡");
+      const utterance = new SpeechSynthesisUtterance("ë¶ˆì¼ì¹˜");
       synth.speak(utterance);
     } else {
       alert("err");

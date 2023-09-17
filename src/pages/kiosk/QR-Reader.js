@@ -2,9 +2,12 @@ import { QrScanner } from "@yudiel/react-qr-scanner";
 import Speak from "../../utils/speak";
 function QRReader() {
   const verifyToken = async (result) => {
-    await fetch(`https://localhost:8002/api/auth?token=${result}`, {
-      method: "GET",
-    })
+    await fetch(
+      `https://localhost:8002/api/auth?token=${result}&secretKey="f30749878ed92d14ce7583d48a779fd4"`,
+      {
+        method: "GET",
+      }
+    )
       .then((response) => response.json())
       .then(async (res) => {
         if (res.state === 200) {
