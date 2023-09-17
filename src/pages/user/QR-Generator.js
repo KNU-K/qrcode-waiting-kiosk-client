@@ -7,6 +7,9 @@ function QRGenerator() {
     // 서버에서 QR 코드를 가져오는 로직
     fetch("https://192.168.45.61:8002/api/auth/register", {
       method: "POST",
+      headers: {
+        Authorization: "f30749878ed92d14ce7583d48a779fd4",
+      },
       body: {
         productName: "asd",
         productPrice: 3000,
