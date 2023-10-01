@@ -59,8 +59,7 @@ function Menu() {
       buyer_email: "example@example", // 구매자 이메일
       buyer_addr: "신사동 661-16", // 구매자 주소
       buyer_postcode: "06018", // 구매자 우편번호
-      m_redirect_url:
-        "https://192.168.45.61:8002/api/auth/mobile-register?secretKey=f30749878ed92d14ce7583d48a779fd4",
+      notice_url: "http://172.31.11.180:8080/callback",
     };
 
     /* 4. 결제 창 호출하기 */
